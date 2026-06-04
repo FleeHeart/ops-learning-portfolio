@@ -80,3 +80,32 @@ Linux cd（英文全拼：change directory）命令用于改变当前工作目�
     ➜ /workspaces/ops-learning-portfolio (main) $ cd ~
 
 工作场景：在 Linux 系统中进行目录切换操作。
+
+## 文件操作相关命令
+
+### mkdir
+Linux mkdir（英文全拼：make directory）命令用于创建目录。
+
+常见使用示例：
+1. 输入：mkdir -p mkdir/test
+-  解释：在工作目录下的 mkdir 目录中，建立一个名为 test 的子目录。若 mkdir 目录原本不存在，则建立一个。
+  （注：本例若不加 -p 参数，且原本 mkdir 目录不存在，则产生错误。）
+  
+### touch
+touch命令用于修改文件或者目录的时间属性，包括存取时间和更改时间。若文件不存在，系统会建立一个新的文件。
+
+常见使用示例：
+1. 要求，将mkdir/test文件的时间属性修改为当前系统时间
+-  输入：➜ /workspaces/ops-learning-portfolio/01-linux-notes/mkdir (main) $ ls -l test <!-- 查看文件属性 -->
+-  输出：total 0
+-  输入：➜ .../ops-learning-portfolio/01-linux-notes/mkdir/test (main) $ touch test <!-- 修改文件时间属性为当前系统时间 -->
+-  输入：@FleeHeart ➜ .../ops-learning-portfolio/01-linux-notes/mkdir/test (main) $ ls -l test <!-- 查看文件属性 -->
+-  输出：-rw-rw-rw- 1 codespace codespace 0 Jun  4 10:22 test
+
+我的思考：使用指令"touch"时，如果指定的文件不存在，则将创建一个新的空白文件。
+
+### cp
+
+### mv
+
+### rm
